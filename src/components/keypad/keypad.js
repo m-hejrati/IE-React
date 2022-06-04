@@ -3,10 +3,28 @@ import s from './keypad.module.css';
 import Button from '../button';
 import cx from 'classnames';
 
-export default function Keypad() {
+export default function Keypad({ setData, setScreen, calculate }) {
   const handleButtonClick = (button) => {
-    // TODO: handle clicking here.
-    console.log(button);
+
+    if (button === "=") {
+      calculate();
+    } 
+    else if (button === "x") {
+      setData(old => old + "*");
+      setScreen(old => old + button);
+    }
+    else if (button === "÷") {
+      setData(old => old + "/");
+      setScreen(old => old + button);
+    }
+    else if (button === "C") {
+      setData("");
+      setScreen("");
+    }
+    else {
+      setData(old => old + button);
+      setScreen(old => old + button);
+    }
   };
 
   const buttons = [
