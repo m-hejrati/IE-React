@@ -1,0 +1,15 @@
+/* use style from this website */
+/* https://upmostly.com/tutorials/build-a-react-timer-component-using-hooks */
+
+.button {
+    background-color: #3151ff;
+    border: 1px solid #1b1f2b;
+    color: white;
+    padding: .6rem 1.5rem;
+    margin: .4rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .8rem;
+    border-style: groove;
+  }
